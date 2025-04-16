@@ -1,9 +1,20 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '11.0'
+
+# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+require_relative '../flutter_tools/bin/podhelper.rb'
+
+flutter_ios_podfile_setup
+
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 
-  pod 'PhoneNumberKit' # <-- Add this line
+  # If using PhoneNumberKit manually:
+  pod 'PhoneNumberKit'
 
 end
